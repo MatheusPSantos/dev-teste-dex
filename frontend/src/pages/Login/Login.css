@@ -11,6 +11,9 @@ body {
 
 .submitForm {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
     background-color: #FFF;
     box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
     width: 430px;
@@ -18,12 +21,117 @@ body {
     top: 4.79%;
 }
 
+.logo {
+    color: #4A4A4A;
+    font-family: Righteous;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 14px;
+    line-height: 43px;
+    text-align: left;
+    position: relative;
+    top: 6.97%;
+    left: 10%;
+    margin-bottom: 18.5%;
+    bottom: 4.1%;
+    height: auto;
+    width: 230px;
+}
+
+.submitForm label {
+    position: relative;
+    color: #4A4A4A;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 19px;
+    text-align: left;
+    left: 9.3%;
+    margin: 1.6% 0;
+}
+
+.submitForm input {
+    position: relative;
+    left: 9.3%;
+    right: 9.3%;
+    border: 1px solid #4A4A4A;
+    width: 350px;
+    height: 55px;
+}
+
 .landingImage {
     position: absolute;
     width: 860px;
-    height: auto;
+    height: 443.93px;
     left: 40.28%;
     top: 22.56%;
     bottom: 34.09%;
     right: 0;
+}
+
+.showPassword {
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 19px;
+    text-align: left;
+    color: #4A4A4A;
+}
+
+.showCheckbox {
+    border: 1px solid #4A4A4A;
+    width: 15px;
+    height: 15px;
+}
+
+.accessNotWork {
+    position: relative;
+    left: 9.3%;
+    color: #4A4A4A;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 17px;
+    text-align: left;
+}
+
+.accessBtn {
+    position: relative;
+    top: 44px;
+    left: 9.3%;
+    right: 9.3%;
+    border: none;
+    background-image: linear-gradient(134.72deg, #AE23A9 0%, #DC4E1B 100%);
+    width: 350px;
+    height: 55px;
+    text-align: center;
+}
+
+.signUpBtn {
+    position: relative;
+    top: 41px;
+    left: 9.3%;
+    right: 9.3%;
+    border: 1px solid #9B9B9B;
+    background: none;
+    width: 350px;
+    height: 45px;
+    text-align: center;
+}
+
+.useTerms {
+    position: relative;
+    left: 9.3%;
+    color: #4A4A4A;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 17px;
+    text-align: left;
+    top: 2.34%;
+    height: 19px;
 }
