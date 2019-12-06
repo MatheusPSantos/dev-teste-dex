@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.submitForm {
+    position: relative;
+    background-color: #FFF;
+    box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
+    width: 430px;
+    height: 746px;
+    top: 4.79%;
+}
+
+.landingImage {
+    position: absolute;
+    width: 860px;
+    height: auto;
+    left: 40.28%;
+    top: 22.56%;
+    bottom: 34.09%;
+    right: 0;
+}
