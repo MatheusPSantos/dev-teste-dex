@@ -6,27 +6,35 @@ export default class Login extends Component {
     render() {
         return (
             <div className="container">
-            <img src="assets/bg.jpg" className="landingImage" />
-                <form className="submitForm">
-                    <img src="" />
-                    <label htmlFor="inputEmail">Email</label>
-                    <input id="inputEmail" name="inputEmail" type="email" />
+                <img src="img/assets/bg.jpg" className="landingImage" />
+                <div className="submitForm">
+                    <img src="/img/assets/logo.png" className="logo" />
+                    <form>
+                        <label id="email" htmlFor="inputEmail">Email</label>
+                        <input id="inputEmail" name="inputEmail" type="email" placeholder="seuemail@email.com" />
 
-                    <label htmlFor="inputPassword">Password</label>
-                    <input id="inputPassword" name="inputPassword" type="password" />
+                        <label id="password" htmlFor="inputPassword">Password</label>
+                        <input id="inputPassword" name="inputPassword" type="password" placeholder="Password" />
 
-                    <label>Mostrar a senha <input type="checkbox" /></label>
+                        <label className="showPassword">Mostrar a senha
+                        <input type="checkbox" className="showCheckbox" />
+                            <span className="mark"></span>
+                        </label>
 
-                    <a href="#testes">Problemas para acessar a conta?</a>
+                        <a className="accessNotWork" href="#testes">Problemas para acessar a sua conta?</a>
 
-                    <button>Acessar</button>
-                    <span>ou</span>
-                    <button>Cadastrar</button>
-
-                    <a href="#">Termos de uso</a> • <a href="#">Políticas de privacidade</a>
-                </form>
-
-
+                        <button className="accessBtn">Acessar</button>
+                        <div className="line">
+                            <div></div>
+                            <span>ou</span>
+                            <div></div>
+                        </div>
+                        <button className="signUpBtn">Cadastrar</button>
+                        <div className="useTerms">
+                            <a href="#">Termos de uso</a> • <a href="#">Políticas de privacidade</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }

@@ -1,3 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+}
+
+a {
+    color: #4a4a4a;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -14,16 +27,205 @@ body {
     background-color: #FFF;
     box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
     width: 430px;
-    height: 746px;
+    height: auto;
     top: 4.79%;
+    padding: 52px 40px;
+}
+
+.logo {
+    text-align: left;
+    position: relative;
+    height: auto;
+    width: 230px;
+    padding-bottom: 52px;
+}
+
+.submitForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#email, #password {
+    position: block;
+    color: #4A4A4A;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 19px;
+    text-align: left;
+}
+
+#inputEmail, #inputPassword {
+    margin: 14px 0px;
+    position: relative;
+    border: 1px solid #4A4A4A;
+    width: 90%;
+    height: 50px;
+    padding: 0 20px;
+}
+
+#inputPassword {
+    background: url('/img/assets/lock.png') no-repeat;
+    background-size: 18px 18px;
+    background-position: 88.57% 16px;
+}
+
+#inputEmail {
+    background: url('/img/assets/mail.png') no-repeat;
+    background-size: 18px 18px;
+    background-position: 88.57% 16px;
 }
 
 .landingImage {
     position: absolute;
     width: 860px;
-    height: auto;
-    left: 40.28%;
-    top: 22.56%;
-    bottom: 34.09%;
-    right: 0;
+    height: 443.93px;
+    left: 40.3%;
+    top: 22.5%;
+}
+
+.showPassword {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 36px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.showPassword input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.mark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background-color: #eee;
+    border: 1px #4a4a4a solid;
+}
+
+.showPassword:hover input~.mark {
+    background-color: #ccc;
+}
+
+.showPassword input:checked~.mark {
+    background-color: #4a4a4a;
+}
+
+.mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.showPassword input:checked~.mark:after {
+    display: block;
+}
+
+.showPassword .mark:after {
+    left: 3px;
+    top: -1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.showCheckbox {
+    border: 1px solid #4A4A4A;
+    width: 15px;
+    height: 15px;
+}
+
+.accessNotWork {
+    position: relative;
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 17px;
+    text-align: left;
+}
+
+.accessBtn {
+    position: relative;
+    margin-top: 36px;
+    border: none;
+    background-image: linear-gradient(134.72deg, #AE23A9 0%, #DC4E1B 100%);
+    width: auto;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.signUpBtn {
+    position: relative;
+    margin-top: 36px;
+    border: 1px solid #9B9B9B;
+    background: none;
+    width: auto;
+    height: 45px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+.signUpBtn:hover {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.useTerms {
+    position: relative;
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 17px;
+    text-align: left;
+    top: 2.34%;
+    height: 19px;
+}
+
+.line {
+    margin-top: 34px;
+    position: relative;
+    display: flex;
+    top: 4.2%;
+}
+
+.line div {
+    margin-top: 10px;
+    height: 1px;
+    width: 45%;
+    background-color: #909090;
+}
+
+.line span {
+    width: 10%;
+    text-align: center;
+}
+
+.useTerms {
+    margin-top: 26px;
+    color: #4a4a4a;
 }
