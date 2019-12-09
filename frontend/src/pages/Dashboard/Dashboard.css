@@ -1,0 +1,39 @@
+.dashboard {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 40px;
+}
+
+.title {
+    color: #4A4A4A;
+    font-size: 24px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    line-height: 22px;
+    text-align: left;
+    text-transform: uppercase;
+    position: relative;
+    left: 250px;
+    margin-bottom: 10px;
+}
+
+.rectangle {
+    position: relative;
+    background-image: linear-gradient(134.72deg, #AE23A9 0%, #DC4E1B 100%);
+    box-shadow: 10 2px 2px 3px rgba(0, 0, 0, 0.1);
+    width: 65.27%;
+    height: 5px;
+    left: 250px;
+}
+
+.list-box {
+    position: relative;
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+    top: 20px;
+    padding: 0 250px;
+}
