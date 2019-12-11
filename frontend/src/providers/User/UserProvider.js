@@ -12,12 +12,15 @@ export default class UserProvider {
     }
 
     async login(user, pass) {
-        return await Promise(async (resolve, reject) => {
-            
-        });
+        try {
+            await Parse.User.logIn(user, pass);
+        }catch(error) {
+            throw error.message;
+        }
     }
-
+    
     currentUser() {
         return Parse.User.current();
     }
+
 }
