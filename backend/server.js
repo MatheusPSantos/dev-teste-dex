@@ -27,7 +27,7 @@ const app = expreess();
 app.use('/dashboard', dashboard);
 app.use('/parse', api);
 
-app.listen(PORT, ()=> {
+app.listen(PORT, () => {
     console.log("Sever running on port: ", PORT, "\nhttp://127.0.0.1:1337");
     console.log("http://127.0.0.1:1337/parse");
     console.log("http://127.0.0.1:1337/dashboard");

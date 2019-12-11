@@ -19,7 +19,7 @@ body {
 
 .container {
     display: grid;
-    width: 1440px;
+    width: 90%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
