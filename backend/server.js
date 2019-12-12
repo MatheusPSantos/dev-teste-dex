@@ -34,6 +34,7 @@ app.use(cors());
 app.use('/dashboard', dashboard);
 app.use('/parse', api);
 
+app.use(expreess.static('public'));
 
 app.listen(PORT, () => {
     console.log("Sever running on port: ", PORT, "\nhttp://127.0.0.1:1337");

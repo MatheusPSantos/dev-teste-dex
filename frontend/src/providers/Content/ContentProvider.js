@@ -9,22 +9,29 @@ export default class ContentProvider {
     parseInitialize() {
         Parse.initialize(parseAppId);
         Parse.serverURL = parseUrlServer;
-        console.log(parseUrlServer);
     }
 
     async getAllFoods() {
         try {
             return await Parse.Cloud.run("getAllFoods");
-        } catch(error) {
-            console.log(error);
+        } catch (error) {
+            throw error;
         }
     }
 
-    // getAllPeople() {
+    async getAllPeoples() {
+        try {
+            return await Parse.Cloud.run("getAllPeoples");
+        } catch (error) {
+            throw error;
+        }
+    }
 
-    // }
-
-    // getAllPlaces() {
-
-    // }
+    async getAllPlaces() {
+        try {
+            return await Parse.Cloud.run("getAllPlaces");
+        } catch (error) {
+            throw error;
+        }
+    }
 }

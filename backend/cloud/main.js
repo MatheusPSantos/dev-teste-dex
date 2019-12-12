@@ -6,19 +6,19 @@ Parse.Cloud.define("getAllFoods", async (req, res) => {
         result.forEach(element => {
             var foodArray = {
                 name: element.get('name'),
-                image_link: element.get('link')
+                imageLink: element.get('link')
             };
 
             foods.push(foodArray);
         });
-        return arr;
+        return foods;
     } catch (error) {
         throw error.message;
     }
 });
 
-Parse.Cloud.define("getAllPeople", async (req, res) => {
-    const query = new ParseServer.Query("Person");
+Parse.Cloud.define("getAllPeoples", async (req, res) => {
+    const query = new Parse.Query("Person");
     try {
         const result = await query.find();
         var peoples = [];
@@ -30,6 +30,7 @@ Parse.Cloud.define("getAllPeople", async (req, res) => {
 
             peoples.push(peopleArray);
         });
+        return peoples;
     } catch (error) {
         throw error.message;
     }
@@ -38,7 +39,7 @@ Parse.Cloud.define("getAllPeople", async (req, res) => {
 Parse.Cloud.define("getAllPlaces", async (req, res) => {
     const query = new Parse.Query("Place");
     try {
-        const result = await MediaQueryListEvent.find();
+        const result = await query.find();
         var places = [];
         result.forEach(element => {
             var placesArray = {
@@ -48,7 +49,7 @@ Parse.Cloud.define("getAllPlaces", async (req, res) => {
 
             places.push(placesArray);
         })
-        
+        return places;
     } catch (error) {
         throw error.message;
     }

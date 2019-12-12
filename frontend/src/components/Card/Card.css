@@ -1,16 +1,14 @@
 .card {
     position: relative;
+    display: inline-block;
     width: 290px;
     height: 290px;
-    background-image: url('/img/avocado.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
 }
 
 .subtitle {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -22,4 +20,10 @@
     margin: 0;
     padding: 0 0 5% 5%;
     font-size: 28px;
+    z-index: 1;
+}
+
+.card img {
+    position: relative;
+    width: 100%;
 }
