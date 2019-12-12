@@ -17,6 +17,11 @@
     left: 17.36%;
 }
 
+.header-logo img {
+    width: 100%;
+    height: auto;
+}
+
 .header-links {
     position: relative;
     display: flex;
@@ -34,4 +39,5 @@
     line-height: 22px;
     width: 116px;
     text-align: right;
+    cursor: pointer;
 }

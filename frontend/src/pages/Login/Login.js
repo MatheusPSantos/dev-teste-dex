@@ -47,9 +47,9 @@ export default class Login extends Component {
     render() {
         return (
             <div className="container">
-                <img src="img/assets/bg.jpg" className="landingImage" alt="" />
+                <img src="assets/bg.jpg" className="landingImage" alt="" />
                 <div className="submitForm">
-                    <img src="/img/assets/logo.png" className="logo" alt="" />
+                    <img src="/assets/logo.png" className="logo" alt="" />
                     <form onSubmit={this.login} method="POST">
                         <label id="email" htmlFor="inputEmail">Email</label>
                         <input id="inputEmail" name="email" type="email" placeholder="seuemail@email.com" onChange={this.onChange} />
