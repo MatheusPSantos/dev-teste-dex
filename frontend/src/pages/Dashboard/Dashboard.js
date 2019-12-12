@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
 
+import ContentProvider from '../../providers/Content/ContentProvider';
+
 import './Dashboard.css';
 
 export default class Dashboard extends Component {

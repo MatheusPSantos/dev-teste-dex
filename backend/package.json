@@ -4,8 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "matheuspsantos",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "parse-dashboard": "^2.0.5",
+    "parse-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
 }

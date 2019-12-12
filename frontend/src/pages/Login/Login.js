@@ -1,20 +1,55 @@
 import React, { Component } from 'react'
-
+import UserProvider from '../../providers/User/UserProvider';
 import './Login.css';
+import { resolve } from 'dns';
+import { rejects } from 'assert';
 
 export default class Login extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            pass: '',
+            showPass: 'password',
+            checkPass: false
+        };
+        this.login = this.login.bind(this);
+
+        if (this.currentUser()) {
+            this.props.history.push('/dashboard')
+        }
+    }
+
+    onChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+        console.log(this.state);
+    }
+
+    login(event) {
+        const userProvider = new UserProvider();
+        const email = this.state.email;
+        const pass = this.state.pass;
+        
+    }
+    currentUser() {
+        return new UserProvider().currentUser();
+    }
+
     render() {
         return (
             <div className="container">
-                <img src="img/assets/bg.jpg" className="landingImage" alt=""/>
+                <img src="img/assets/bg.jpg" className="landingImage" alt="" />
                 <div className="submitForm">
-                    <img src="/img/assets/logo.png" className="logo" alt=""/>
-                    <form>
+                    <img src="/img/assets/logo.png" className="logo" alt="" />
+                    <form onSubmit={this.login}>
                         <label id="email" htmlFor="inputEmail">Email</label>
-                        <input id="inputEmail" name="inputEmail" type="email" placeholder="seuemail@email.com" />
+                        <input id="inputEmail" name="email" type="email" placeholder="seuemail@email.com" onChange={this.onChange} />
 
                         <label id="password" htmlFor="inputPassword">Password</label>
-                        <input id="inputPassword" name="inputPassword" type="password" placeholder="Password" />
+                        <input id="inputPassword" name="pass" type="password" placeholder="Password" onChange={this.onChange} />
 
                         <label className="showPassword">Mostrar a senha
                         <input type="checkbox" className="showCheckbox" />
@@ -23,7 +58,7 @@ export default class Login extends Component {
 
                         <a className="accessNotWork" href="#testes">Problemas para acessar a sua conta?</a>
 
-                        <button className="accessBtn">Acessar</button>
+                        <button className="accessBtn" type="submit">Acessar</button>
                         <div className="line">
                             <div></div>
                             <span>ou</span>
