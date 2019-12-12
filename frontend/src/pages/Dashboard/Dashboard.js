@@ -18,10 +18,6 @@ export default class Dashboard extends Component {
         };
     }
 
-    componentDidMount() {
-        new ContentProvider().getAllFoods();
-    }
-
     render() {
         return (
             <div>

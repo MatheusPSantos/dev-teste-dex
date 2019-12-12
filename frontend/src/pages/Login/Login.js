@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import UserProvider from '../../providers/User/UserProvider';
 import './Login.css';
+import { resolve } from 'dns';
+import { rejects } from 'assert';
 
 export default class Login extends Component {
 
@@ -14,9 +16,9 @@ export default class Login extends Component {
         };
         this.login = this.login.bind(this);
 
-        if(this.currentUser()){
-			this.props.history.push('/dashboard')
-		}
+        if (this.currentUser()) {
+            this.props.history.push('/dashboard')
+        }
     }
 
     onChange = event => {
@@ -26,21 +28,15 @@ export default class Login extends Component {
         console.log(this.state);
     }
 
-    async login(event) {
+    login(event) {
         const userProvider = new UserProvider();
         const email = this.state.email;
         const pass = this.state.pass;
-        try {
-            await userProvider.login(email, pass);
-            this.props.history.push("/dashboard");
-        } catch (error) {
-            alert("Error: ", error.message);
-        }
+        
     }
-
-    currentUser(){
-		return new UserProvider().currentUser();
-	}
+    currentUser() {
+        return new UserProvider().currentUser();
+    }
 
     render() {
         return (
