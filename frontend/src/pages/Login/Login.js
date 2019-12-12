@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import UserProvider from '../../providers/User/UserProvider';
 import './Login.css';
-import { resolve } from 'dns';
-import { rejects } from 'assert';
 
 export default class Login extends Component {
 
@@ -28,12 +26,20 @@ export default class Login extends Component {
         console.log(this.state);
     }
 
-    login(event) {
+    async login(event) {
+        event.preventDefault();
         const userProvider = new UserProvider();
         const email = this.state.email;
         const pass = this.state.pass;
-        
+        try {
+            await userProvider.login(email, pass);
+            this.props.history.push("/dashboard");
+        } catch (error) {
+            alert("Error: ", error.message);
+        }
     }
+
+
     currentUser() {
         return new UserProvider().currentUser();
     }
@@ -44,7 +50,7 @@ export default class Login extends Component {
                 <img src="img/assets/bg.jpg" className="landingImage" alt="" />
                 <div className="submitForm">
                     <img src="/img/assets/logo.png" className="logo" alt="" />
-                    <form onSubmit={this.login}>
+                    <form onSubmit={this.login} method="POST">
                         <label id="email" htmlFor="inputEmail">Email</label>
                         <input id="inputEmail" name="email" type="email" placeholder="seuemail@email.com" onChange={this.onChange} />
 
