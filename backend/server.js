@@ -25,12 +25,7 @@ const dashboard = new ParseDashboard({
 const app = expreess();
 const cors = require('cors');
 app.use(cors());
-// app.use((res, req, next) => {
-//     res.setHeader("Access-Control-Allow-Methods", 'GET, POST, PUT');
-//     res.setHeader("Access-Control-Allow-Origin", '*');
-//     res.setHeader('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-//     next();
-// });
+
 app.use('/dashboard', dashboard);
 app.use('/parse', api);
 
